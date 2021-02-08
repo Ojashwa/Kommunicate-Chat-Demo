@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <h1>This is Demo chat</h1>
+</body>
+<script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"13b8140a6eb8db4f96f77bf136ce279c3","popupWidget":true,
+            "onInit":function (){
+                var iFrame = document.getElementById("kommunicate-widget-iframe");
+                iFrame.style.cssText="position: relative;float: right;top: -80px;";
+                var css = "body{margin: -15px -4px;} #mck-sidebox-launcher{position:absolute;float:right;top: 9px;} #mck-sidebox{top: 70px}";
+                Kommunicate.customizeWidgetCss(css);
+            },
+            };
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget-test.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+</html>
